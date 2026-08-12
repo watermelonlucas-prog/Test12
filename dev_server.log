@@ -1,0 +1,36 @@
+
+> ledger-lite@0.1.0 dev
+> next dev
+
+▲ Next.js 16.3.0 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env.local
+✓ Ready in 542ms
+✓ Running next.config.ts took 43ms
+
+○ Compiling / ...
+ GET / 200 in 7.6s (next.js: 6.6s, application-code: 999ms)
+ GET /transactions 200 in 924ms (next.js: 755ms, application-code: 169ms)
+[browser] Error fetching transactions: {
+  code: [32m''[39m,
+  details: [32m'TypeError: Failed to fetch\n'[39m +
+    [32m'    at http://localhost:3000/_next/static/chunks/node_modules_0cn3url._.js:22105:23\n'[39m +
+    [32m'    at http://localhost:3000/_next/static/chunks/node_modules_0cn3url._.js:22153:16\n'[39m +
+    [32m'    at async executeWithRetry (http://localhost:3000/_next/static/chunks/node_modules_0cn3url._.js:12638:29)\n'[39m +
+    [32m'    at async TransactionsPage.useEffect.loadData (http://localhost:3000/_next/static/chunks/src_0grjwy8._.js:43:45)'[39m,
+  hint: [32m''[39m,
+  message: [32m'TypeError: Failed to fetch'[39m
+}
+    at TransactionsPage.useEffect.loadData (src/app/transactions/page.tsx:48:19)
+  46 |       if (mounted) {
+  47 |         if (error) {
+> 48 |           console.error('Error fetching transactions:', error);
+     |                   ^
+  49 |         } else {
+  50 |           setTransactions(data || []);
+  51 |         } (src/app/transactions/page.tsx:48:19)
+ GET / 200 in 68ms (next.js: 6ms, application-code: 62ms)
+ GET /transactions 200 in 58ms (next.js: 7ms, application-code: 51ms)
+ GET /inventory 200 in 490ms (next.js: 351ms, application-code: 138ms)
+ GET /break-even 200 in 1178ms (next.js: 976ms, application-code: 202ms)
