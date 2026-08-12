@@ -2,11 +2,15 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, List, Box, TrendingUp } from 'lucide-react';
+import { TrendingUp, Activity, BarChart, TrendingDown, Hourglass } from 'lucide-react';
 import clsx from 'clsx';
 
 const navItems = [
   { name: 'Break-Even Analysis', href: '/', icon: TrendingUp },
+  { name: 'Liquidity Health', href: '/liquidity', icon: Activity },
+  { name: 'Marketing Metrics', href: '/marketing', icon: BarChart },
+  { name: 'MoM Growth', href: '/growth', icon: TrendingDown },
+  { name: 'Cash Runway', href: '/runway', icon: Hourglass },
 ];
 
 export function Sidebar() {
