@@ -133,7 +133,7 @@ export default function BreakEvenPage() {
             <ResponsiveContainer width="100%" height="100%">
               <LineChart
                 data={chartData}
-                margin={{ top: 20, right: 30, left: 20, bottom: 20 }}
+                margin={{ top: 20, right: 30, left: 40, bottom: 20 }}
               >
                 <CartesianGrid strokeDasharray="3 3" vertical={false} />
                 <XAxis
@@ -142,7 +142,7 @@ export default function BreakEvenPage() {
                 />
                 <YAxis
                   tickFormatter={(value) => `$${value}`}
-                  label={{ value: 'Amount ($)', angle: -90, position: 'insideLeft' }}
+                  label={{ value: 'Amount ($)', angle: -90, position: 'insideLeft', offset: -25 }}
                 />
                 <Tooltip
                   formatter={(value) => {
